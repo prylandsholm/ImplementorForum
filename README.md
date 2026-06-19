@@ -1,5 +1,5 @@
 
-# OBI4x.org – Implementor Forum (Prototype)
+# semantic4iop.org – Implementor Forum (Prototype)
 
 This repository contains a lean landing page for the OBI4x Implementor Forum, established following the Industrial Semantic Interoperability Summit 2026.
 
