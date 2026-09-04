@@ -1,0 +1,16 @@
+# Working Groups
+# Define active working groups in the Implementor Forum
+# Example:
+# - name: "Manufacturing IoT Working Group"
+#   description: "Focused on semantic standards for industrial IoT environments."
+#   leader: "Jane Smith"
+#   status: "Active"
+#   members: 25
+#   contact: "group-email@example.com"
+
+# - name: "Supply Chain Transparency"
+#   description: "Developing interoperability standards for supply chain visibility."
+#   leader: "Bob Johnson"
+#   status: "Forming"
+#   members: 12
+#   contact: "supply-chain@example.com"

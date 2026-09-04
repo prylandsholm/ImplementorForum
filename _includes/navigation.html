@@ -1,0 +1,11 @@
+<nav class="topnav">
+    <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">{{ site.title }}</a>
+    <a href="{{ site.baseurl }}/use-cases/" class="{% if page.url contains '/use-cases' %}active{% endif %}">Use Cases</a>
+    <a href="{{ site.baseurl }}/focus-groups/" class="{% if page.url contains '/focus-groups' %}active{% endif %}">Focus Groups</a>
+    <a href="{{ site.baseurl }}/events/" class="{% if page.url contains '/events' %}active{% endif %}">Events</a>
+    <a href="{{ site.baseurl }}/roadmap/" class="{% if page.url contains '/roadmap' %}active{% endif %}">Roadmap</a>
+    <a href="{{ site.baseurl }}/resources/" class="{% if page.url contains '/resources' %}active{% endif %}">Resources</a>
+    <a href="https://forms.office.com/e/N8n24DvrsV" target="_blank">Registration</a>
+    <a href="{{ site.baseurl }}/about/" class="{% if page.url contains '/about' %}active{% endif %}">About</a>
+</nav>
+<p></p>

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="notification">Note: This is the future site for Implementor Forum for Industrial Semantic Interoperability. The site is currently under development, and additional content will be added shortly.</div>
+
+<div class="intro-section">
+    {{ content }}
+</div>
+
+{% if site.data.recordings %}
+<section class="recordings-section">
+    <h2>Watch the Summit Recordings</h2>
+    <p>Presentations from the Industrial Semantic Interoperability Summit 2026 are now available. Explore insights, use cases and real life implementations.</p>
+    
+    <div class="recordings-grid">
+        {% for recording in site.data.recordings %}
+        <div class="recording-card">
+            <h3>{{ recording.title }}</h3>
+            <p class="speaker"><strong>Speaker:</strong> {{ recording.speaker }}</p>
+            <p class="date">{{ recording.date | date: "%B %d, %Y" }}</p>
+            {% if recording.brightcove_id %}
+            <div class="video-container">
+                <div data-experience="{{ recording.brightcove_id }}"></div>
+            </div>
+            {% endif %}
+            {% if recording.description %}
+            <p>{{ recording.description }}</p>
+            {% endif %}
+            {% if recording.tags %}
+            <div class="tags">
+                {% for tag in recording.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% if site.data.recordings[0].brightcove_id %}
+    <script src="https://players.brightcove.net/6024607088001/experience_{{ site.data.recordings[0].brightcove_id }}/live.js"></script>
+    {% endif %}
+</section>
+{% endif %}
+
+<section class="cta-section">
+    <h2>This is just the start – join the Implementor Forum today.</h2>
+    <p><a href="https://forms.office.com/e/N8n24DvrsV" target="_blank" class="cta-button">Register here</a></p>
+</section>
+
+{% if site.data.logo %}
+<img class="logo" src="{{ site.baseurl }}/logo.png" alt="Logo" />
+{% endif %}

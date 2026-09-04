@@ -1,0 +1,64 @@
+# Jekyll Configuration for Semantic4iop Implementor Forum
+
+title: Semantic4iop.org – Implementor Forum
+description: Community platform for Industrial Semantic Interoperability
+url: "https://prylandsholm.github.io/ImplementorForum"
+baseurl: "/ImplementorForum"
+
+# Build settings
+theme: null
+layouts_dir: "_layouts"
+includes_dir: "_includes"
+data_dir: "_data"
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+  input: GFM
+
+# Collections for organized content
+collections:
+  recordings:
+    output: true
+    permalink: /:collection/:slug/
+  use_cases:
+    output: true
+    permalink: /:collection/:slug/
+  events:
+    output: true
+    permalink: /:collection/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: recordings
+    values:
+      layout: recording
+  - scope:
+      path: ""
+      type: use_cases
+    values:
+      layout: use_case
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+  - scope:
+      path: "pages"
+    values:
+      layout: default
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/

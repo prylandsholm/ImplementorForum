@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article class="recording-detail">
+    <h1>{{ page.title }}</h1>
+    
+    {% if page.speaker %}
+    <p class="meta"><strong>Speaker:</strong> {{ page.speaker }}</p>
+    {% endif %}
+    
+    {% if page.date %}
+    <p class="meta"><strong>Date:</strong> {{ page.date | date: "%B %d, %Y" }}</p>
+    {% endif %}
+    
+    {% if page.brightcove_id %}
+    <div class="video-container">
+        <div data-experience="{{ page.brightcove_id }}"></div>
+    </div>
+    <script src="https://players.brightcove.net/6024607088001/experience_{{ page.brightcove_id }}/live.js"></script>
+    {% endif %}
+    
+    <div class="recording-content">
+        {{ content }}
+    </div>
+    
+    {% if page.tags %}
+    <div class="tags">
+        {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+</article>

@@ -1,0 +1,16 @@
+# Summit Recordings Data
+# Add recordings here in YAML format
+# Example:
+# - title: "Keynote: Future of Semantic Interoperability"
+#   speaker: "Dr. Jane Smith"
+#   date: 2026-06-15
+#   brightcove_id: "6a2907e73c805bf5cb890407"
+#   description: "Exploring the future directions of semantic interoperability in industrial contexts."
+#   tags: [keynote, vision]
+
+- title: "Industrial Semantic Interoperability Summit 2026 Keynote"
+  speaker: "Multiple Speakers"
+  date: 2026-06-15
+  brightcove_id: "6a2907e73c805bf5cb890407"
+  description: "Opening remarks and keynote presentations from the 2026 summit at Høvik."
+  tags: [keynote, summit-2026]
